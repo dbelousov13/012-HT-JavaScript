@@ -102,14 +102,56 @@ else alert("Sorry, you missed");
 
 // 2) Напишите две проверки.
 // Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.
+{
+  let test = true;
+  if (test)
+    alert(
+      "Напишите две проверки.\n\n Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.\n\n\ntest = true \nВЕРНО"
+    );
+  else
+    alert(
+      "Напишите две проверки.\n\n Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.\n\n\ntest = true \nНЕ ВЕРНО"
+    );
+}
 
-// let test = prompt(
-// "Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'. \n\nInput variable TEST"
-// );
-// if (test==)
+{
+  let test = false;
+  if (test)
+    alert(
+      "Напишите две проверки.\n\n Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.\n\n\ntest = false \nВЕРНО"
+    );
+  else
+    alert(
+      "Напишите две проверки.\n\n Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.\n\n\n\n\ntest = false НЕ ВЕРНО"
+    );
+}
 
 // Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно'
 // Проверьте работу скрипта при test, равном true, false.
+
+{
+  let test = true;
+  if (test != true)
+    alert(
+      "Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно' \n\ntest = true \n\n ВЕРНО"
+    );
+  else
+    alert(
+      "Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно' \n\ntest = true \n\n НЕ ВЕРНО"
+    );
+}
+
+{
+  let test = false;
+  if (test != true)
+    alert(
+      "Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно' \n\ntest = false \n\n ВЕРНО"
+    );
+  else
+    alert(
+      "Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно' \n\ntest = false \n\n НЕ ВЕРНО"
+    );
+}
 
 // 3) Вычислить сумму покупки с учетом скидки. Скидка 3% предоставляется, если сумма покупки больше 500 грн., а скидка 5% - если сумма покупки больше 800 грн. Сумму покупки вводит юзер.
 
@@ -148,8 +190,42 @@ do {
   console.log(startNumber--);
 } while (startNumber > -1);
 
-//NO ANSWER
-console.log("2) Вывод чисел от 10 до 50, которые кратны 5 \n\nWHILE");
+console.log("2) Вывод чисел от 10 до 50, которые кратны 5 \n\nFOR");
+for (let i = 10; i <= 50; i++) {
+  if (i % 5 === 0) {
+    console.log("i = ", i);
+  }
+}
+
+console.log(
+  "2) Вывод чисел от 10 до 50, которые кратны 5 \n\nWHILE\n\n Почему в этом способе не выводится 10?"
+);
+
+let i2 = 10;
+while (i2++ <= 50) {
+  if (i2 % 5 === 0) {
+    console.log(i2);
+  }
+}
+
+console.log("2) Вывод чисел от 10 до 50, которые кратны 5 \n\nDO WHILE");
+
+let i3 = 10;
+
+do {
+  if (i3 % 5 === 0) {
+    console.log(i3);
+  }
+} while (i3++ <= 50);
+
+let start1Number = 10;
+let ii = 0;
+while (start1Number <= 50) {
+  start1Number = start1Number + ii;
+  if (start1Number % 5 === 0);
+  ii++;
+}
+console.log(start1Number);
 
 // 3) Найти сумму чисел в пределах от 1 до 100.
 
@@ -176,12 +252,24 @@ console.log(
 );
 // 4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит
 let userAnswer;
-while (true) {
-  userAnswer = prompt("Calculate please 2 + 2 * 2 = ");
-  if ((userAnswer = false)) {
-    alert("one more chance");
-  }
+while (userAnswer != 6) {
+  userAnswer = prompt(
+    "4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит. \nWHILE\n\n Calculate 2 + 2 * 2 = "
+  );
 }
+
+for (userAnswer = 0; userAnswer != 6; ) {
+  userAnswer = prompt(
+    "4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит. \nFOR\n\n Calculate 2 + 2 * 2 = "
+  );
+}
+
+userAnswer = 0;
+do {
+  userAnswer = prompt(
+    "4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит. \n\nDO WHILE\n\n Calculate 2 + 2 * 2 = "
+  );
+} while (userAnswer != 6);
 
 // ");
 

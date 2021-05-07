@@ -153,6 +153,36 @@ console.log("2) Вывод чисел от 10 до 50, которые кратн
 
 // 3) Найти сумму чисел в пределах от 1 до 100.
 
+let i = 0;
+let result = 0;
+while (i <= 100) {
+  result = result + i;
+  i++;
+}
+console.log("Найти сумму чисел в пределах от 1 до 100 WHILE. Answer: ", result);
+
+result = 0;
+for (i = 0; i <= 100; i++) result = result + i;
+console.log("Найти сумму чисел в пределах от 1 до 100 FOR. Answer: ", result);
+
+i = 0;
+result = 0;
+do {
+  result = result + i;
+} while (++i <= 100);
+console.log(
+  "Найти сумму чисел в пределах от 1 до 100 DO WHILE. Answer: ",
+  result
+);
 // 4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит
+let userAnswer;
+while (true) {
+  userAnswer = prompt("Calculate please 2 + 2 * 2 = ");
+  if ((userAnswer = false)) {
+    alert("one more chance");
+  }
+}
+
+// ");
 
 // /******************************************************************/

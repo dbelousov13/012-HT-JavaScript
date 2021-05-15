@@ -314,7 +314,7 @@ const ebook02 = new EBook(
   "2002",
   "Kyiv-publish",
   "PDF",
-  33
+  33 //vscode почему-то убирает "висячие запятые..."
 );
 
 const ebook03 = new EBook(
@@ -323,7 +323,7 @@ const ebook03 = new EBook(
   "2002",
   "Kyiv-publish",
   "MS Word",
-  34
+  34 //vscode почему-то убирает "висячие запятые..."
 );
 
 console.log("E-Book 1 ", ebook01);

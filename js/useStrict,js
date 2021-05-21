@@ -1,0 +1,11 @@
+"use strict";
+
+function Car(brand) {
+  if (!new.target) {
+    return new Car(brand);
+  }
+  console.log("new.target :>> ", new.target);
+  this.brand = brand;
+}
+
+const car1 = Car("Tesla");

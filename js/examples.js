@@ -21,6 +21,8 @@ for (let i = 0; i < 100; i++) {
   );
   users.push(user);
 }
+
+// console.log(users.toString()); // вывел объекты. с разными типами данных не работает корректно
 // Get woman users
 
 // const womanUsers = users.filter(function (isWoman) {

@@ -1,113 +1,57 @@
 "use strict";
+function User(name, surname, age, isMale, email, isSubscribed) {
+  this.firstName = name;
+  this.lastName = surname;
+  this.age = age;
+  this.isMale = isMale;
+  this.email = email;
+  this.isSubscribed = isSubscribed;
+}
 
-const array0 = [10, 7, 0, 15, 26, 965, 13, 0, 152];
+const users = [];
 
-function evenIndex(currentItem, index, array) {
-  if (index % 2 === 0) {
-    console.log(`value in ${index} even index is ${currentItem} `);
-    // console.log("object :>> ", index);
+for (let i = 0; i < 100; i++) {
+  const user = new User(
+    `Username${i}`,
+    `Userurname${i}`,
+    Math.floor(Math.random() * 90),
+    Math.random() > 0.5,
+    `useremail${i}@gmail.com`,
+    Math.random() > 0.5
+  );
+  users.push(user);
+}
+// Get woman users
+
+// const womanUsers = users.filter(function (isWoman) {
+//   return !users.isMale;
+// });
+
+// console.table(womanUsers);
+
+// console.table(`${users.filter((isMale) => !isMale)}`);
+
+// const womanUsers1 = users.filter(isWoman);
+// function isWoman(user) {
+//   return user.isMale;
+// }
+// console.table(womanUsers1);
+
+// 1.1 Для примера с последней части занятия (https://github.com/pecourses/js-intro/blob/main/js/users.js) прописать метод getFullName() (возвращает строку с полным именем) для юзера. Общую логику (т.е. указанный метод) вынести в прототип.
+
+// 1.2 Получить массив полных имен лиц женского пола школьного возраста (6 - 18 лет).
+const schoolWoman = users.filter(school);
+function school(user) {
+  return !user.isMale && user.age >= 6 && user.age <= 18;
+}
+console.table(schoolWoman);
+
+const schoolGirls = users.map(girls);
+function girls(user) {
+  if (!user.isMale && user.age >= 6 && user.age <= 18) {
+    return user.email;
   }
 }
-array0.forEach(evenIndex);
-// console.log(array0.forEach(evenIndex));
-//index%2===0ести элементы с четными индексами.
-
-// 4 Вывести только четные элементы (четные числа делятся на 2 без остатка).
-
-function evenItems(currentItem) {
-  if (currentItem % 2 === 0) {
-    console.log(`Even item from array: ${currentItem}`);
-  }
-}
-array0.forEach(evenItems);
-
-// 5 Вывести индексы нулевых элементов (элемент равен нулю).
-
-function zeroElements(currentItem, index) {
-  if (currentItem === 0) {
-    console.log(`Zero elements are in: ${index} box`);
-  }
-}
-
-array0.forEach(zeroElements);
-// 6 Подсчитать количество нулевых элементов.
-// 1 sample
-let counter = 0;
-function countZero(currentItem) {
-  if (currentItem === 0) {
-    counter++;
-    // console.log("counter :>> ", counter);
-  }
-}
-array0.forEach(countZero);
-console.log("counter :>> ", counter);
-
-// 2 sample
-console.log(
-  `${
-    array0.filter((currentItem) => currentItem === 0).length
-  } zero elements in array`
-);
-
-// let count = 0;
-// for
-
-// // Методы перебора массивов.
-// 7 Получить новый массив из заданного, который будет содержать только положительные числа (-1, 5, 0, 9, -10 => 5, 9).
-const array1 = [-1, 5, 0, 9, -10, 5, 9];
-
-// 1 способ
-const newArray1 = array1.filter(function (positiveItems) {
-  return positiveItems > 0;
-});
-
-console.log("New array with positive numbers :>> ", newArray1);
-// 2 способ
-console.log(
-  `New array with positive numbers second var:>>  ${array1.filter(
-    (item) => item > 1
-  )}`
-);
-
-// 8 Получить новый массив их заданного, который будет содержать все элементы исходного, возведенные в квадрат (-1, 5, 0, 9, -10 => 1, 25, 0, 81, 100).
-
-const array8 = [-1, 5, 0, 9, -10];
-// 1 метод
-const newArray8 = array8.map(function (squareArray) {
-  return squareArray * squareArray;
-});
-console.log("New array in 2 degree 1-st method :>> ", newArray8);
-
-// 2 метод
-console.log(
-  `New array in 2 degree 2-nd method ${array8.map((item) => item * item)}`
-);
-
-// 9 Проверить, являются ли все елементы массива положительными числами (* или в принципе числами).
-const mixedArray = [1, 6, "some text", 8, 96, -698, 35];
-
-function isPositiveNumber(currentItem) {
-  return currentItem > 0;
-}
-console.log(
-  `В данном массиве mixedArray  только числа: ${mixedArray.every(
-    isPositiveNumber
-  )}`
-); //ниями, отрабаотывает как с числами так и с текстовыми значениями, но чувствую в return currentItem > 0 нужно как-то тип задавать...
-
-// 10 Проверить, есть ли в массиве хоть один отрицательный элемент.
-function isNegativeNumber(currentItem) {
-  return currentItem < 0;
-}
-console.log(
-  `В данном массиве mixedArray присутвует хотя бы один отрицательный элемент: ${mixedArray.some(
-    isNegativeNumber
-  )}`
-);
-
-// 11 Вывести элементы массива, возведенные в куб.
-const cubeMixedArray = mixedArray.map(function (cubeElements) {
-  return Math.pow(cubeElements, 3);
-});
-
-console.log("cubeMixedArray :>> ", cubeMixedArray);
+console.table(schoolGirls);
+// 1.3 Проверить, есть ли среди пользователей пользователь с email`ом useremail99@gmail.com
+// 1.4 Проверить, все ли пользователи подписаны (subscribed).

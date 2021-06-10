@@ -41,7 +41,7 @@ const stack1 = new Stack(10);
 // console.log("stack1.pop() :>> ", stack1.pop());
 // console.log("stack1.peek :>> ", stack1.peek);
 // console.log("stack1.pop() :>> ", stack1.pop());
-// console.log("stack1.peek :>> ", stack1.peek);
+// console.log'use("stack1.peek :>> ", stack1.peek);
 
 // Является ли строка правильной скобочной последовательностью () - ок, (( - не ок, (()-не ок
 

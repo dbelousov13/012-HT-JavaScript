@@ -1,0 +1,13 @@
+[
+  {
+    "firstName": "AVa",
+    "age": 20,
+    "isMale": true,
+  }
+
+   {
+    "firstName": "AVa2",
+    "age": 40,
+    "isMale": true,
+  }
+]

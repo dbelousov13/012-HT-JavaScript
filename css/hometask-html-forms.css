@@ -1,0 +1,102 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.6rem;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px;
+}
+h3 {
+  font-size: 1, 5rem;
+  font-weight: bold;
+  margin: 10px;
+}
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-width: 500px;
+  align-self: center;
+  text-align: left;
+  margin: 100px;
+  background-image: url(../img/main_img.jpg);
+  background-size: cover;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border: 1px solid rgb(109, 146, 224);
+  width: 450px;
+  min-width: 450px;
+  margin-bottom: 10px;
+}
+.inputStringDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  margin: 10px;
+}
+.inputName {
+  margin-top: 10px;
+  width: 120px;
+}
+
+.formInput {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.nameFormInputs {
+  width: 49%;
+  height: 25px;
+}
+
+#size1 {
+  width: 100%;
+  height: 25px;
+}
+
+#phoneNumb1,
+#phoneNumb2 {
+  width: 10%;
+}
+
+#phoneNumb3 {
+  width: 77.5%;
+}
+#messageSubj {
+  width: 100%;
+}
+#messageForm {
+  height: 100px;
+  width: 100%;
+}
+#submitBtn {
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  color: darkslategrey;
+}
+
+#blackText {
+  color: darkslategrey;
+}
